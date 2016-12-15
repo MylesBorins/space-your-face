@@ -59,6 +59,42 @@ html
     .doors {
       background-image: url('images/doors.gif')
     }
+    
+    .taco {
+      background-image: url('images/taco.gif')
+    }
+    
+    .hearing {
+      background-image: url('images/hearing.gif')
+    }
+    
+    .elf {
+      background-image: url('images/elf.gif')
+    }
+    
+    .sad-melon {
+      background-image: url('images/sad-melon.jpg')
+    }
+    
+    .coffee {
+      background-image: url('images/coffee-filter.gif')
+    }
+    
+    .ear-placement {
+      background-image: url('images/ear-placement.gif')
+    }
+    
+    .math {
+      background-image: url('images/math.gif')
+    }
+    
+    .binaural-dummy {
+      background-image: url('images/binaural-dummy.jpg')
+    }
+    
+    .binaural-experience {
+      background-image: url('images/binaural-experience.jpg')
+    }
 
   body
 
@@ -91,7 +127,7 @@ html
         h1 Today we are going to talk about sound
       
       section(data-bespoke-backdrop='krang')
-        h1 Specifically how our brains interpret sound in space
+        h1 Specifically how brains interpret sound in space
         
       section(data-bespoke-backdrop='brain')
         h1 So we can hack our brains
@@ -102,7 +138,7 @@ html
       section(data-bespoke-backdrop='space')
         h1 To space your face.
 
-      section(data-bespoke-backdrop='melon-head')
+      section(data-bespoke-backdrop='melon-head-two')
         h1 Imagine, your head is a melon
         //- img.headroom(src='images/melon-1.png' alt='melon head with headphones' width='200px')
       
@@ -128,15 +164,15 @@ html
       section(data-bespoke-backdrop='trippy-too')
         h1 Trippy, eh?
       
-      section
+      section(data-bespoke-backdrop='taco')
         h1 Your perception would be tripping too!
         
-      section
-        h2 Our brains can easily decipher
+      section(data-bespoke-backdrop='elf')
+        h4 Our brains can easily decipher
         h3 how far away a sound is.
-        h3 and if the sound is coming from your left or right.
+        h3 and if the sound is coming from the left or right.
         
-      section
+      section(data-bespoke-backdrop='hearing')
         h1 The amount of energy reaching each ear gives this away
       
       section
@@ -145,9 +181,9 @@ html
       section
         h2 If the sound reaches a particular ear first
         h3 we know about the direction it came from
-        
-      section
-        h1 But if we were a floating melon in an anechoic chamber
+
+      section(data-bespoke-backdrop='melon-head-four')
+        h1 But if we were a floating melon with holes for ears in an anechoic chamber
       
       section
         h1 We would have no way of knowing the height of the sound
@@ -155,15 +191,16 @@ html
       section
         h1 We would also have no idea if it was coming from in front or behind
       
-      section
+      section(data-bespoke-backdrop='sad-melon')
         h2 Thankfully we are not floating melon heads
         h3 with holes for ears in anechoic chambers!
+        h4 That would be sad.
       
-      section
+      section(data-bespoke-backdrop='coffee')
         h2 Our ear lobes and body act as a filter,
         h3 leaving a unique signature on the waveform
       
-      section
+      section(data-bespoke-backdrop='ear-placement')
         h2 Our brains are able to decode this signature
         h3 and place the sounds accordingly
       
@@ -171,10 +208,10 @@ html
         h2 The Doors of Perception are Opened
         h3 What can we do with this knowledge?
       
-      section
+      section(data-bespoke-backdrop='melon-head-four')
         h1 It turns out that sometimes our heads are melons with holes for ears in an anechoic chamber
         
-      section
+      section(data-bespoke-backdrop='melon-head')
         h1 Everytime we put on headphones!
       
       section
@@ -189,23 +226,29 @@ html
       section
         h1 What is a transfer function
       
-      section
+      section(data-bespoke-backdrop='math')
         h2 Some mathy shit
         h3 fancy way of saying a black box
         h4 with defined input and output
       
       section
-        h3 signal ➡️ transfer-function ➡️ modified-signal
+        img(src='images/transfer-function.png' alt='a simple flat block diagram')
+        //- h3 signal ➡️ transfer-function ➡️ modified-signal
       
       section
-        h2 With an HRTF we can provice an audio signal
+        h2 An HRTF take a signal
         h3 a position in space
-        h4 and get back a binaural stereo signal
+        h4 and returns a stereo signal with binaural encoding
       
-      section
+      section(data-bespoke-backdrop='binaural-dummy')
         h2 Binaural is a classic form a spatialized recording
         h3 where two microphones are placed on a model where the ears should be
         h4 this model could likely be a melon with two holes
+        
+      section(data-bespoke-backdrop='binaural-experience')
+        h2 When you later play back and listen to the binaural recording
+        h3 You will experience the spatialization of the original recording
+        h4 Like VR for your melon!
       
       section
         h1 We have HRTF in the browser!
