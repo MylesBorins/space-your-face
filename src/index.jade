@@ -107,6 +107,22 @@ html
     .cool {
       background-image: url('images/cool.gif')
     }
+    
+    .sphere {
+      background-image: url('images/spherical-harmonics.jpg')
+    }
+    
+    .maticulous {
+      background-image: url('images/maticulous.jpg')
+    }
+
+    .overtone {
+      background-image: url('images/overtone.png')
+    }
+    
+    .melted-face {
+      background-image: url('images/melted-face.gif')
+    }
 
   body
 
@@ -280,11 +296,92 @@ html
         h1 The panner node!
       
       section
+        pre
+          code.language-javascript.
+            // slightly simplified for clarity
+            var context = new AudioContext();
+            var osc = context.createOscillator();
+            var panner = context.createPanner();
+            panner.panningModel = 'HRTF';
+            panner.setPosition(x, y, z);
+            osc.connect(panner);
+            panner.connect(context.destination);
+            osc.start();
+      section
         h1 Demo Time
       
-      Section
-        h3 I'm Probably out of time by now, but if I'm not I should ramble about Ambisonics and Wavefield arrays
+      section
+        h1 HRTFs and Binaural are cool
       
+      section
+        h1 But it would be nice to not have to use headphones
+      
+      section
+        h1 Ambisonics
+        h3 A standard for encoding spatial audio
+      
+      section
+        img(src='images/the-machine.jpg' alt='ambisonics algorithmic installation' width='50%')
+        h3.headroom
+          a(href="http://roberthenke.com/installations/the_machine.html") the machine
+      
+      section(data-bespoke-backdrop='sphere')
+        h1 Higher Order Spherical Harmonics
+        
+      section
+        img(src='images/listening-room.jpg' alt='omg the listening room at ccrma is so cool' width='70%')
+        p.headroom the listening room at ccrma
+      
+      section
+        h1 Super portable between ambisonics decoders
+      
+      section
+        h1 Limited to sounds coming from an outer sphere
+      
+      section(data-bespoke-backdrop='maticulous')
+        h1 Your speaker system needs to be maticulously arranged
+      
+      section
+        h1 Do you like maticulously arranged speakers?
+      
+      section
+        h1 You are going to love wave field synthesis arrays
+      
+      section
+        img(src='images/array.jpg' alt='omg the a super duper cool wave field array' width='70%')
+      
+      section
+        img(src='images/wave-field.png' alt='wavefield is way too cool' width='70%')
+      
+      section
+        h1 Literally AR for your ears
+      
+      section
+        h1 One of the coolest things?
+      
+      section
+        h1 Most of the research for this stuff
+      
+      section
+        h1 Is open
+        
+      section 
+        h1 So there are browser implementations
+        
+      section
+        h2 You can encode your sound ambisonically
+        h3 mapped to the movement of a VR headset
+        h4 pipe it through virtual speakers
+        h5 and decode it to headphones binaurally
+      
+      section(data-bespoke-backdrop='overtone')
+        h1 ALL IN THE FREAKING BROWSER
+        p.headroom
+          a(href="https://www.npmjs.com/package/omnitone") Diagram from the overtone library
+
+      section(data-bespoke-backdrop='melted-face')
+        h1 You may now pick your melted faces up from the ground
+
       section
         h2 Thank You
         img.headroom(src='images/best-gif-evar.gif' alt='a surfing puppy' width='20%')
